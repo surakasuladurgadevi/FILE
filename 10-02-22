@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+void main()
+{
+    FILE *p;
+    char ch;
+   p=fopen("file.c","r");
+   if(p==NULL)
+   {
+       printf("file not found");
+       exit(0);
+   }
+   printf("\n data in file\n");
+   while((ch=fgetc(p))!=EOF)
+   printf("%c",ch);
+   fclose(p);
+}
